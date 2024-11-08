@@ -1,33 +1,23 @@
-import java.util.Random;
-
 public abstract class Character {
     
     protected String name;
-    protected int health = 100;  
-    protected int armor = 100;
-    private final String[] phrases;
+    protected int health;
+    protected int armor;
     
     
-    public Character(String name, int health, int armor, String[] phrases) {
+    
+    public Character(String name, int health, int armor) {
         this.name = name;
         this.health = health;
         this.health = armor;
-        this.phrases = phrases;
-        
     }
 
     public abstract void attack();
     public abstract void defend();
 
    
-   
     public void talk(){
-        String phrase = randPhrase();
-        System.out.println(phrase);
+        System.out.println(name + " says: Hello!");
     }
-    
-    private String randPhrase() {
-        Random rand = new Random();
-        return phrases[rand.nextInt(phrases.length)];
-    }
+
 }

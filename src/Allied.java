@@ -1,24 +1,38 @@
+import java.util.Random;
+
 public class Allied extends Character {
-    
+    // lista på fraser från allierade
+    private String[] phrases = {
+        "i will always have yor back, brother",
+        "nice armor you have, is it new?",
+        "I dont like war, but i really like Aliens for breakfast",
+        "Dude, you smoke weed??",
+        "Primeminister doesnt give a shit about us on the field..."
+    };
     public Allied(String name, int health, int armor) {
-        super(name, health, armor, new String[] {
-            "Dont you worry, i got you back",
-            "I have extra ammo if needed, dont you worry",
-            "Dude, you smoke weed?",
-            "I dont like war, but i really like Aliens for breakfast",
-            "The primeminister doesent give a shit about us on the field..."
-        });
+        super(name, health, armor);
     }
     // metoder för att attackera, försvara och prata, hämtade från Character
-    @Override
+    
+    @Override // abstrakt metod
     public void attack() {
         System.out.println(name + " makes an Attack!");
     }
 
-    @Override
+    @Override // abstrakt metod
     public void defend() {
         System.out.println(name + " defends itself!");
     }
-
+    
+    @Override // ej abstrakt metod
+    public void talk(){
+        String phrase = randPhrase();
+        System.out.println(phrase);
+    }
+    // slumtar fram en string ur "phrases"
+    private String randPhrase() {
+        Random rand = new Random();
+        return phrases[rand.nextInt(phrases.length)];
+    }
 
 }
