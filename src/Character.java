@@ -3,8 +3,8 @@ import java.util.Random;
 public abstract class Character {
     
     protected String name;
-    protected int health;  
-    protected int armor;
+    protected int health = 100;  
+    protected int armor = 100;
     private final String[] phrases;
     
     
