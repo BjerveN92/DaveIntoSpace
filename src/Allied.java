@@ -14,12 +14,12 @@ public class Allied extends Character {
     }
     // metoder för att attackera, försvara och prata, hämtade från Character
     
-    @Override // abstrakt metod
+    @Override // abstrakt metod från character
     public void attack() {
         System.out.println(name + " makes an Attack!");
     }
 
-    @Override // abstrakt metod
+    @Override // abstrakt metod från character
     public void defend() {
         System.out.println(name + " defends itself!");
     }

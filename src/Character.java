@@ -11,11 +11,11 @@ public abstract class Character {
         this.health = health;
         this.health = armor;
     }
-
+    // abstrakta metoder som bara kan nås av subklasserna(där dom implenteras)
     public abstract void attack();
     public abstract void defend();
 
-   
+   // ej abstrakta metoder 
     public void talk(){
         System.out.println(name + " says: Hello!");
     }
