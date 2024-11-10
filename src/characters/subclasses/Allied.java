@@ -1,29 +1,32 @@
+package characters.subclasses;
+import characters.Character;
 import java.util.Random;
 
-public class Enemy extends Character {
-    // lista på fraser för fiender
+
+public class Allied extends Character {
+    // lista på fraser från allierade
     private String[] phrases = {
-        "well well, look whos here, an allie-scum",
-        "your armor will melt like fudge on christmas-eve! mohaha",
-        "I just looove the smell of dead bodies in the morning",
-        "DROP THAT F****N JOINT NOW YOU DAMN HIPPIE!!",
-        "Your primeminister is a joke, and so are you! allie-scum!!!"
+        "i will always have yor back, brother",
+        "nice armor you have, is it new?",
+        "I dont like war, but i really like Aliens for breakfast",
+        "Dude, you smoke weed??",
+        "Primeminister doesnt give a shit about us on the field..."
     };
-    public Enemy(String name, int health, int armor) {
-        super (name, health, armor);
+    public Allied(String name, int health, int armor) {
+        super(name, health, armor);
     }
     // metoder för att attackera, försvara och prata, hämtade från Character
     
-    @Override // abstrakt metod
+    @Override // abstrakt metod från character
     public void attack() {
         System.out.println(name + " makes an Attack!");
     }
 
-    @Override // abstrakt metod
-    public void defend(){
+    @Override // abstrakt metod från character
+    public void defend() {
         System.out.println(name + " defends itself!");
     }
-
+    
     @Override // ej abstrakt metod
     public void talk(){
         String phrase = randPhrase();
@@ -34,6 +37,5 @@ public class Enemy extends Character {
         Random rand = new Random();
         return phrases[rand.nextInt(phrases.length)];
     }
-
 
 }
