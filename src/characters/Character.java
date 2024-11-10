@@ -6,8 +6,6 @@ public abstract class Character {
     protected int health;
     protected int armor;
     
-    
-    
     public Character(String name, int health, int armor) {
         this.name = name;
         this.health = health;

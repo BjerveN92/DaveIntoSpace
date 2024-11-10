@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Enemy extends Character {
     // lista på fraser för fiender
-    private String[] phrases = {
+    private final String[] phrases = {
         "well well, look whos here, an allie-scum",
         "your armor will melt like fudge on christmas-eve! mohaha",
         "I just looove the smell of dead bodies in the morning",

@@ -1,6 +1,8 @@
 import characters.subclasses.Allied;
 import characters.subclasses.Enemy;
 
+
+
 public class Main {
     public static void main(String[] args) throws Exception {
         // två objekt från vardera klasser

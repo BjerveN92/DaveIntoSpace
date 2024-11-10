@@ -1,17 +1,9 @@
 package characters.subclasses;
 import characters.Character;
-import java.util.Random;
 
 
 public class Allied extends Character {
-    // lista på fraser från allierade
-    private String[] phrases = {
-        "i will always have yor back, brother",
-        "nice armor you have, is it new?",
-        "I dont like war, but i really like Aliens for breakfast",
-        "Dude, you smoke weed??",
-        "Primeminister doesnt give a shit about us on the field..."
-    };
+
     public Allied(String name, int health, int armor) {
         super(name, health, armor);
     }
@@ -26,16 +18,11 @@ public class Allied extends Character {
     public void defend() {
         System.out.println(name + " defends itself!");
     }
-    
-    @Override // ej abstrakt metod
+    @Override
+    // ej abstrakta metoder 
     public void talk(){
-        String phrase = randPhrase();
-        System.out.println(phrase);
+    System.out.println(name + " says: Hello Friend!");
     }
-    // slumtar fram en string ur "phrases"
-    private String randPhrase() {
-        Random rand = new Random();
-        return phrases[rand.nextInt(phrases.length)];
-    }
+    
 
 }
