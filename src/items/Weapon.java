@@ -11,4 +11,18 @@ public class Weapon {
         this.type = type;
         this.damage = damage;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    
 }
