@@ -17,6 +17,11 @@ public class Soldier extends Allied {
     public Soldier(String name, int health, int armor, boolean isArmed) {
         super(name, health, armor, isArmed);
     }
+    
+    
+    
+    
+    
     @Override
     public void attack() {
         System.out.println(name + " makes an Attack!");
