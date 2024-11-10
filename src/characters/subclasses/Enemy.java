@@ -9,7 +9,7 @@ public class Enemy extends Character {
         "well well, look whos here, an allie-scum",
         "your armor will melt like fudge on christmas-eve! mohaha",
         "I just looove the smell of dead bodies in the morning",
-        "DROP THAT F****N JOINT NOW YOU DAMN HIPPIE!!",
+        "GET HERE YOU COWARD!",
         "Your primeminister is a joke, and so are you! allie-scum!!!"
     };
     public Enemy(String name, int health, int armor, boolean isArmed) {

@@ -2,9 +2,9 @@ package items;
 
 public class Weapon {
     
-    String name;
-    String type;
-    int damage;
+    protected String name;
+    protected String type;
+    protected int damage;
 
     public Weapon (String name, String type, int damage) {
         this.name = name;  

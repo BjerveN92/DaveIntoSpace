@@ -14,7 +14,7 @@ public class Soldier extends Allied {
         "i will always have yor back, brother",
         "nice armor you have, is it new?",
         "I dont like war, but i really like some Aliens for breakfast",
-        "Dude, you smoke weed??",
+        "Dude, wazzup?",
         "Primeminister doesnt give a shit about us on the field..."
     };
     
