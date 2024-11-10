@@ -1,23 +1,23 @@
-import characters.subclasses.Allied;
 import characters.subclasses.Enemy;
-// import characters.subclasses.subsub.Worker;
-// import characters.subclasses.subsub.Soldier;
+import characters.subclasses.subsub.Soldier;
+import items.Weapon;
 
 
 public class Main {
     public static void main(String[] args) throws Exception {
         // två objekt från vardera klasser
-        Allied marine = new Allied("Dave", 100, 100, true);
         Enemy bandit = new Enemy("Greger the childmolester", 100, 100, true);
+        Soldier soldier = new Soldier("Sgt. Johnson", 100, 100, true, new Weapon("M16", "Assault Rifle", 10));
+        // två objekt från subsubklasser        
         // testa att prata, attackera och försvara
         System.out.println("\033c");
-        marine.talk();
-        marine.attack();
-        marine.defend();
-        System.out.println();
-        bandit.talk();
-        bandit.attack();
-        bandit.defend();
 
+        // System.out.println();
+        // bandit.talk();
+        // bandit.attack();
+        // bandit.defend();
+        soldier.talk();
+        soldier.attack();
+        soldier.defend();
     }
 }
