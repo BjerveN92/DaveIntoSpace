@@ -4,8 +4,8 @@ import characters.Character;
 
 public class Allied extends Character {
 
-    public Allied(String name, int health, int armor) {
-        super(name, health, armor);
+    public Allied(String name, int health, int armor, boolean isArmed) {
+        super(name, health, armor, isArmed);
     }
     // metoder för att attackera, försvara och prata, hämtade från Character
     

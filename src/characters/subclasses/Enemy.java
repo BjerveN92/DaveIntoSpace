@@ -12,8 +12,8 @@ public class Enemy extends Character {
         "DROP THAT F****N JOINT NOW YOU DAMN HIPPIE!!",
         "Your primeminister is a joke, and so are you! allie-scum!!!"
     };
-    public Enemy(String name, int health, int armor) {
-        super (name, health, armor);
+    public Enemy(String name, int health, int armor, boolean isArmed) {
+        super (name, health, armor, isArmed);
     }
     // metoder för att attackera, försvara och prata, hämtade från Character
     
