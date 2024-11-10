@@ -1,6 +1,6 @@
 // hänvisar till vilken mapp klassen ligger i 
 package characters.subclasses.subsub;
-// importerar klassen Allied från mappen "subclasses" (alltså den klassen som Soldier ärver ifrån)
+// importerar klassen det ärvs ifrån!
 import characters.subclasses.Allied;
 import java.util.Random;
 
@@ -14,8 +14,8 @@ public class Soldier extends Allied {
         "Primeminister doesnt give a shit about us on the field..."
     };
     
-    public Soldier(String name, int health, int armor) {
-        super(name, health, armor);
+    public Soldier(String name, int health, int armor, boolean isArmed) {
+        super(name, health, armor, isArmed);
     }
     @Override
     public void attack() {

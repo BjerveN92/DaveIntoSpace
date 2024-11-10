@@ -7,8 +7,8 @@ import characters.subclasses.Enemy;
 public class Main {
     public static void main(String[] args) throws Exception {
         // två objekt från vardera klasser
-        Allied marine = new Allied("Dave", 100, 100);
-        Enemy bandit = new Enemy("Greger the childmolester", 100, 100);
+        Allied marine = new Allied("Dave", 100, 100, true);
+        Enemy bandit = new Enemy("Greger the childmolester", 100, 100, true);
         // testa att prata, attackera och försvara
         System.out.println("\033c");
         marine.talk();
