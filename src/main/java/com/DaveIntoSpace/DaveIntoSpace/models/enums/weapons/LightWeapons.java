@@ -1,4 +1,4 @@
-package com.DaveIntoSpace.DaveIntoSpace.models.enums;
+package com.DaveIntoSpace.DaveIntoSpace.models.enums.weapons;
 
 public enum LightWeapons {
     LASER_DAGGER,
