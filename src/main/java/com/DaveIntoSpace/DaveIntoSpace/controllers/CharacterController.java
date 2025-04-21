@@ -6,9 +6,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.DaveIntoSpace.DaveIntoSpace.models.Character;
 import com.DaveIntoSpace.DaveIntoSpace.services.CharacterService;
 
 @RestController
@@ -41,6 +43,12 @@ public class CharacterController {
     }
 
     // UPDATE======================================================================
+    @PutMapping("/{id}")
+    public ResponseEntity<List<Character>> updateCharacterById(@PathVariable String id,
+            @RequestBody Character character) {
+        List<Character> updatedCharacter = characterService.updateCharacterById(id, character);
+        return ResponseEntity.ok(updatedCharacter);
+    }
 
     // DELETE======================================================================
 
