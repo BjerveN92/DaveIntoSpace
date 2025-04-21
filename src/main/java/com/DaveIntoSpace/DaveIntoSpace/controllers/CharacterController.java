@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,24 +20,28 @@ public class CharacterController {
         this.characterService = characterService;
     }
 
-    // ======================================================================
-
-    // CREATE
+    // CREATE======================================================================
     @PostMapping
     public ResponseEntity<Character> createCharacter(@RequestBody Character character) {
         Character newCharacter = characterService.createCharacter(character);
         return ResponseEntity.ok(newCharacter);
     }
 
-    // READ
-    @GetMapping("/character")
-    public ResponseEntity<List<Character>> getAllAliens() {
+    // READ======================================================================
+    @GetMapping("/character-list")
+    public ResponseEntity<List<Character>> getAllCharacters() {
         List<Character> allCharacters = characterService.getAllCharacters();
         return ResponseEntity.ok(allCharacters);
     }
 
-    // UPDATE
+    @GetMapping("/character-list/{id}")
+    public ResponseEntity<List<Character>> getCharacterById(@PathVariable String id) {
+        List<Character> oneCharacter = characterService.getCharacterById(id);
+        return ResponseEntity.ok(oneCharacter);
+    }
 
-    // DELETE
+    // UPDATE======================================================================
+
+    // DELETE======================================================================
 
 }
