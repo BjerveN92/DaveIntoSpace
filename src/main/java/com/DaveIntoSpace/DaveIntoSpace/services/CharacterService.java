@@ -55,5 +55,11 @@ public class CharacterService {
 
         return mongoOperations.findAll(Character.class);
     }
+
     // DELETE======================================================================
+    public Character deleteCharacter(String id) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("id").is(id));
+        return mongoOperations.findAndRemove(query, Character.class);
+    }
 }

@@ -3,6 +3,7 @@ package com.DaveIntoSpace.DaveIntoSpace.controllers;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -47,9 +48,18 @@ public class CharacterController {
     public ResponseEntity<List<Character>> updateCharacterById(@PathVariable String id,
             @RequestBody Character character) {
         List<Character> updatedCharacter = characterService.updateCharacterById(id, character);
+        if (updatedCharacter.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(updatedCharacter);
     }
 
     // DELETE======================================================================
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Character> deleteCharacter(@PathVariable String id) {
+        Character deletedCharacter = characterService.deleteCharacter(id);
+        return ResponseEntity.ok(deletedCharacter);
+
+    }
 
 }
