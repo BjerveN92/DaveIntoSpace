@@ -1,18 +1,3 @@
-# FROM eclipse-temurin:17-jdk-jammy AS builder
-# WORKDIR /opt/app
-# COPY .mvn/ .mvn
-# COPY mvnw pom.xml ./
-# RUN ./mvnw dependency:go-offline
-# COPY ./src ./src
-# RUN ./mvnw clean install -DskipTests
-
-# FROM eclipse-temurin:17-jre-jammy
-# WORKDIR /opt/app
-# EXPOSE 8080
-# COPY --from=builder /opt/app/target/*.jar /opt/app/*.jar
-# ENTRYPOINT ["java","-Dspring.profiles.active=prod", "-jar", "/opt/app/*.jar" ]
-
-
 # -----------------------------
 # Steg 1: Bygg Spring Boot-applikationen
 # -----------------------------
@@ -24,6 +9,9 @@ WORKDIR /opt/app
 COPY .mvn/ .mvn
 COPY mvnw .
 COPY pom.xml .
+
+# Ge körbarhetsrättigheter till mvnw
+RUN chmod +x mvnw
 
 # Ladda ner alla beroenden
 RUN ./mvnw dependency:go-offline
