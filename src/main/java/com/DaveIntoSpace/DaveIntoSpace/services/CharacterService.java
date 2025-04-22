@@ -51,7 +51,7 @@ public class CharacterService {
                 .set("primaryWeapons", updatedCharacter.getPrimaryWeapons())
                 .set("secondaryWeapons", updatedCharacter.getSecondaryWeapons())
                 .set("explosiveWeapons", updatedCharacter.getExplosiveWeapons());
-        mongoOperations.updateFirst(query, update, java.lang.Character.class);
+        mongoOperations.updateFirst(query, update, Character.class);
 
         return mongoOperations.findAll(Character.class);
     }

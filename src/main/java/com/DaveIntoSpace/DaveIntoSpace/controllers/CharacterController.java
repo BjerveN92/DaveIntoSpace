@@ -31,6 +31,11 @@ public class CharacterController {
     }
 
     // READ======================================================================
+    @GetMapping("/")
+    public String HomeIndex() {
+        return "{'this is' : 'HOME'}";
+    }
+
     @GetMapping("/character-list")
     public ResponseEntity<List<Character>> getAllCharacters() {
         List<Character> allCharacters = characterService.getAllCharacters();
